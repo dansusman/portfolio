@@ -1,8 +1,5 @@
-html {
-    @font-face {
-      font-family: 'Comic Sans MS';
-      src: url("comic-sans-ms/comici.ttf");
-    }
+* {
+    font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 div {
