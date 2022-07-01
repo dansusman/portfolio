@@ -1,15 +1,16 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  max-width: 50em;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10em;
+  padding-top: 5em;
+  padding-bottom: 0;
   background-color: white;
   color: black;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   user-select: none;
+  font-size: clamp(15px, 1vw, 40px);
 }
 
 body[theme=dark] {
@@ -28,11 +29,10 @@ a {
 
 .header {
     display: flex;
-    align-items: center;
-    vertical-align: center;
 }
 
-/* Dark Mode Toggle Styling*/
+/* Dark Mode Toggle Styling */
+
 #theme-toggle {
   visibility: hidden;
 }
@@ -45,8 +45,6 @@ a {
   width: 25px;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
-  position: fixed;
-  right: 0px;
 }
 
 #theme-toggle:not(:checked) + label {
@@ -56,5 +54,20 @@ a {
 #theme-toggle:checked + label {
   background-color: transparent;
   box-shadow: inset -6px -5px 1px 1px #fff;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 2em;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        max-width: 70em;
+    }
 }
 
