@@ -29,6 +29,21 @@ a {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+.fourOhFour {
+    font-size: 10em;
+    margin: 0em;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+
+}
+
 /* Dark Mode Toggle Styling */
 
 #theme-toggle {
